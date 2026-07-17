@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.galeria {
+  display: grid;
+
+  /* LA LÍNEA MÁGICA: crea tantas columnas de mínimo 250px como quepan,
+     y las estira para llenar el espacio si sobra lugar */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item p {
+  padding: 10px;
+  font-weight: bold;
+}

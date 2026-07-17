@@ -1,0 +1,81 @@
+:root {
+  --color-texto: #333;
+  --color-cta: #2a9d8f;
+  --color-cta-hover: #21867a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: var(--color-texto);
+}
+
+header, main, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section, aside {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+h1 {
+  color: #264653;
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.precio-anterior {
+  color: #888;
+}
+
+.precio-oferta {
+  color: #d62828;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.descuento {
+  background-color: #d62828;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button.cta {
+  background-color: var(--color-cta);
+  color: white;
+  font-weight: bold;
+}
+
+button.cta:hover {
+  background-color: var(--color-cta-hover);
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
