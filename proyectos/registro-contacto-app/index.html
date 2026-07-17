@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeatFlow | Registro y Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>BeatFlow</h1>
+    <p>La app para descubrir y compartir música con tus amigos.</p>
+  </header>
+
+  <main>
+
+    <section id="registro">
+      <h2>Crear cuenta</h2>
+
+      <form action="https://formspree.io/f/mrenppyb" method="POST">
+
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre_completo">Nombre completo</label>
+          <input type="text" id="nombre_completo" name="nombre_completo"
+                 placeholder="Nombre y apellido" autocomplete="name" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email"
+                 placeholder="tuemail@ejemplo.com" autocomplete="email" required>
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password"
+                 placeholder="Mínimo 8 caracteres" autocomplete="new-password"
+                 minlength="8" required>
+
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" placeholder="Ej: 16"
+                 min="13" max="99" required>
+
+          <label for="fecha_nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+          <label for="username">Nombre de usuario</label>
+          <input type="text" id="username" name="username"
+                 placeholder="Entre 5 y 12 caracteres alfanuméricos"
+                 pattern="[A-Za-z0-9]{5,12}" minlength="5" maxlength="12"
+                 autocomplete="username" required
+                 aria-label="Nombre de usuario, entre 5 y 12 caracteres alfanuméricos">
+        </fieldset>
+
+        <fieldset>
+          <legend>Ubicación</legend>
+
+          <label for="pais">País</label>
+          <select id="pais" name="pais" autocomplete="country" required>
+            <option value="">Elegí tu país</option>
+            <option value="ar">Argentina</option>
+            <option value="cl">Chile</option>
+            <option value="uy">Uruguay</option>
+            <option value="br">Brasil</option>
+            <option value="mx">México</option>
+            <option value="es">España</option>
+          </select>
+
+          <label for="ciudad">Ciudad de residencia</label>
+          <input type="text" id="ciudad" name="ciudad" list="lista-ciudades"
+                 placeholder="Ej: Buenos Aires" autocomplete="address-level2">
+          <datalist id="lista-ciudades">
+            <option value="Buenos Aires"></option>
+            <option value="Córdoba"></option>
+            <option value="Rosario"></option>
+            <option value="Mendoza"></option>
+            <option value="La Plata"></option>
+          </datalist>
+        </fieldset>
+
+        <fieldset>
+          <legend>Perfil</legend>
+
+          <p>Género</p>
+          <label><input type="radio" name="genero" value="femenino" required> Femenino</label>
+          <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+          <label><input type="radio" name="genero" value="otro" required> Otro</label>
+          <label><input type="radio" name="genero" value="prefiero_no_decir" required> Prefiero no decir</label>
+
+          <p>Intereses musicales</p>
+          <label><input type="checkbox" name="intereses" value="rock"> Rock</label>
+          <label><input type="checkbox" name="intereses" value="pop"> Pop</label>
+          <label><input type="checkbox" name="intereses" value="electronica"> Electrónica</label>
+          <label><input type="checkbox" name="intereses" value="hiphop"> Hip Hop</label>
+          <label><input type="checkbox" name="intereses" value="jazz"> Jazz</label>
+
+          <label for="bio">Biografía corta</label>
+          <textarea id="bio" name="bio" rows="4" cols="40"
+                    placeholder="Contanos un poco sobre vos y tus gustos musicales"
+                    maxlength="200"></textarea>
+        </fieldset>
+
+        <button type="submit">Crear cuenta</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto y soporte técnico</h2>
+
+      <form action="https://formspree.io/f/mrenppyb" method="POST">
+
+        <label for="contacto_nombre">Nombre</label>
+        <input type="text" id="contacto_nombre" name="contacto_nombre"
+               placeholder="Tu nombre" autocomplete="name" required>
+
+        <label for="contacto_email">Email</label>
+        <input type="email" id="contacto_email" name="contacto_email"
+               placeholder="tuemail@ejemplo.com" autocomplete="email" required>
+
+        <label for="motivo">Motivo de contacto</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Elegí un motivo</option>
+          <option value="problema_tecnico">Problema técnico</option>
+          <option value="facturacion">Facturación</option>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" cols="40"
+                  placeholder="Contanos en detalle tu consulta" required></textarea>
+
+        <label>
+          <input type="checkbox" name="acepta_terminos" required>
+          Acepto los términos y condiciones
+        </label>
+
+        <button type="submit" aria-label="Enviar formulario de contacto">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <time datetime="2026">2026</time> BeatFlow</p>
+  </footer>
+
+</body>
+</html>

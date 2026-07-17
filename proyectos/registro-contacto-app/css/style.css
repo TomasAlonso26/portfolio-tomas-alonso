@@ -1,0 +1,40 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  display: inline;
+  margin-right: 6px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 40px;
+}
